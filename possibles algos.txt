@@ -1,0 +1,66 @@
+possible algo
+
+Algo 1:
+
+int findDigitOccurrence(int num1, int num2)
+{
+	if(num2<0) num2=-num2; //for negative numbers.
+       
+	int count=0,a;
+       do
+       {
+            a=num2%10;
+            if(a==num1)   
+            {
+                count=count+1;
+            }
+            num2=num2/10;
+       }while(num2!=0);
+       return count;
+}
+
+                          OR
+	while(num2>9)
+    		{
+    			rem=num2%10;
+    			if(num1==rem)
+    				count=count+1;
+    			num2=num2/10;
+    		}
+    	if(num1==num2)
+    	{
+    		count=count+1;
+    	}
+    	return(count);
+
+both these are nearly same and efficient.
+
+
+Algo 2
+	first storing the digits in array and then comparing elements of arrays with num1 and getting count.
+			OR 
+	first getting count of number of digits and then using loop and getting count.
+
+	both are inefficient compared to first one.
+
+ALGO 3 
+	directly runs the loop for constant time.
+
+
+MISC(miscellenous)
+
+	some of codes have run the loop for fixed number of time(like 8,9,7) and some others have tried to do different things
+
+marking
+
+for each code I have marked 1 in matching algo column.left blank in case code is empty or not related to problem.
+is_edge_0_0-- marked 1 if it does  not covers (0,0) case
+is_negativeno-- marked 1 if it does not handles negative numbers.
+is_modular-- no if it isn't.
+
+
+
+
+
+
+ 	
